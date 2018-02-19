@@ -1,0 +1,57 @@
+img {
+	border: 1px black solid;
+}
+
+.hover:hover {
+	border-radius: 15px;
+}
+
+.hover:active {
+	border-radius: 50px;
+}
+
+.active:active {
+	opacity: 0.5;
+}
+
+.focus:focus {
+	filter: grayscale(100%);
+}
+
+div {
+	width:100%;
+	height: 50px;
+	background-color: gray;
+}
+
+div .square {
+	height: 30px;
+	width: 30px;
+	background-color: blue;
+	margin-top: 10px;
+	position: fixed;
+}
+
+@keyframes slowrotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(720deg);}
+}
+
+div .square:focus {
+	background-color: red;
+	animation-name: slowrotate;
+	animation-duration: 5s;
+}
+
+@keyframes rotatecc {
+	from{transform: rotate(0deg);}
+	to{transform: rotate(720deg);}
+	0% {left: 0%;}
+	50% {left:100%;}
+	100%{left: 0%;}
+}
+
+div .square:active{
+	animation-name: rotatecc;
+	animation-duration: 10s;
+}
