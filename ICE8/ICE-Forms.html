@@ -3,6 +3,18 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Employment Application Form</title>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+		<link href="stylesheet.css" rel="stylesheet">
+		<!-- <script>  
+	    $(document).ready(function(){
+	      /*    YOUR jQuery CODE HERE */ 
+	      $("#country").change(function(){
+	        $("#country ").toggle();
+	      })
+	    }); 
+	    </script>
+	    tried to write jquery to have state field hidden until United States chosen for country
+	   	 --> 
 	</head>
 
 	<body>
@@ -11,33 +23,41 @@
 
 
       <h4><u>Basic Information</u></h4>
+
+      <!-- 
+      add patterns and validation
+      basic styling (change the font)
+      toggling on big categories
+      reset button
+      make so we can add more employer/degree
+       -->
+
    <div>
 	</a>
 
       	<!-- Content -->
         <fieldset>
 			<legend>Account Information:</legend>
-			<label> First name:<input type="text" name="fname"   autofocus>
+			<label> First name:<input type="text" name="fname" required autofocus> 
 			</label><br>
 
-		  	<label for="lname"> Last name:</label><input type="text" name="lname"><br>
+		  	<label for="lname"> Last name:</label><input type="text" name="lname" required><br> 
 
-		  	<label> Email: <input type="email" name="email"   placeholder = "iyad@umich.edu"></label><br>
+		  	<label> Email: <input type="email" name="email"   placeholder = "iyad@umich.edu" required></label><br> 
 
-		  	<label> Password: <input type="password"   name="password1"></label><br>
+		  	<label> Password (uppercase letter, lowercase letter, and number required): <input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" name="password1" required></label><br> 
 
-		  	<label> Confirm Password: *<input type="password"   name="password2" onchange="validatePass(this)"></label><br>
+		  	<label> Confirm Password: *<input type="password"   name="password2" onchange="validatePass(this)" required></label><br>
 		</fieldset><br>
 
 		<fieldset>
 			<legend>Contact Information:</legend>
-			<label>Phone number: <input type="text"></label><br><br>
+			<label>Phone number: <input id="phone" name="phone" type="tel"  pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Eg. 123-456-7890" required>  </label><br><br>
 
-		<label>Country of Citizenship: <select id="country" class="bfh-countries" data-country="US"></select><br></label><br>
-
-		<label> Address: <input type="text" id="address" name="address" size="50" placeholder = "1234 N Wells St"></label><br>
-		<label> City: <input type="text" name="city"  placeholder = "Ann Arbor"></label>
-		<label> State: <input type="text" name="state"  placeholder = "MI"></label>
+		<label>Country of Citizenship: <select id="country" class="bfh-countries" data-country="US"></select><br></label><br><!-- must have bootstrap files in the directory --> 
+		<label> Address: <input type="text" id="address" name="address" size="50" pattern="^\d+\s[A-z]+\s[A-z]+" placeholder = "1234 N Wells St" required></label><br> 
+		<label> City: <input type="text" name="city"  placeholder = "Ann Arbor" required></label> 
+		<label> State: <input type="text" id="state" name="state"  placeholder = "MI"></label>
 		<label> Zip code: <input type="text" name="Zip code"  placeholder = "48108"></label><br>  
 		</fieldset><br>
       </div>
