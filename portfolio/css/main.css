@@ -9,8 +9,13 @@
 
 header {
 	width: 20vh;
-	float: left;
 	display: block;
+	position: fixed;
+	height: 100%;
+}
+
+#menubox {
+	display: none;
 }
 
 .logo img {
@@ -18,22 +23,40 @@ header {
 	margin: 1em;
 }
 
-nav ul {
+.dropbtn,.dropdown-content {
+	display: none;
+}
+
+.rnav {
+	left: 1em;
+	position: relative;
+}
+
+.rnav ul {
 	font-family: "Roboto Slab", Helvetica, sans-serif;
 }
 
-nav li {
+.rnav li {
 	display: block;
 	padding: 2em 0em 2em 1em;
 }
 
-nav li:hover {
+.rnav li:hover {
 	text-transform: uppercase;
 }
 
-nav li:active {
+.rnav li:active {
 	text-transform: uppercase;
 	color: red;
+}
+
+.rest {
+	position: relative;
+	left: 20vh;
+	width: 80vw;
+	padding-bottom: 20%;
+	overflow: auto;
+	z-index: 1
 }
 
 h1 {
@@ -42,12 +65,12 @@ h1 {
 }
 
 footer {
-	position: fixed;
 	bottom: 0;
 	width: 100%;
 	padding-top: .5em;
 	border-top: .5em;
-	border-top-color: red;
+	position: fixed;
+	z-index: 2
 }
 
 footer div {
@@ -55,9 +78,15 @@ footer div {
 }
 footer div a {
 	display: inline-block;
-	width: 10%;
+	width: 5vh;
+	margin: 0 5vh;
 }
 
-footer div img {
+footer div i {
 	height: 5vh;
+}
+
+footer p {
+	text-align: center;
+	padding: .5em;
 }

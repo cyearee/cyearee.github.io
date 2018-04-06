@@ -2,43 +2,82 @@
 <html>
 <head>
 	<title>About YR</title>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/about.css">
-	<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">	
+	<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<script>
+		function myFunction() {
+    		document.getElementById("myDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
+		}
+	</script>
 </head>
 <body>
 	<header>
 		<div class="logo">
 			<img src="img/logo.png" alt="website logotype">
 		</div>
-		<nav>
+		<nav class="rnav">
 			<ul>
-				<li><a href="index.html">home</a></li>
-				<li><a href="#">about</a></li>
-				<li><a href="stuff.html">stuff</a></li>
-				<li><a href="contact.html">contact</a></li>
+				<li><a href="index.html" tabindex="1">home</a></li>
+				<li><a href="about.html" tabindex="2">ABOUT</a></li>
+				<li><a href="stuff.html" tabindex="3">design</a></li>
+				<li><a href="contact.html" tabindex="4">contact</a></li>
 			</ul>
 		</nav>
-	</header>
-	<div>
-		<h1>ABOUT ME</h1>
-		<p>
-			YR is a real Swiss Army knife of a gal with a hungry belly and a curious mind. She was born in South Korea, but she is a Californian at heart, hailing from Sacramento. She is proficient at data science and analytics, but there is so much more to her than meets the eye - she is a former PCV (Benin 2015-2017) and an expert orange peeler who speaks three languages fluently and is in the process of learning German. Was willen sie? 
-		</p>
-		<img src="img/me.JPG" alt="Picture of YR" width="30%">
-	</div>
-	
-	<div>
-		<h1>RESUME</h1>
-		<!-- <embed src="doc/cv.pdf" width="40%" height="80%"> -->
-		<iframe src="doc/cv.pdf" style="width: 80%;height: 100%;border: none;"></iframe>
-	</div>
-	<footer>
-		<div>
-			<a href="#"><img src="img/facebook.png" alt="Facebook logo - click here for YR's page!"></a>
-			<a href="#"><img src="img/linkedin.png" alt="Linkedin logo - click here for YR's page!"></a>
-			<a href="#"><img src="img/github.png" alt="Github logo - click here for YR's page!"></a>
+		<div class="dropdown">
+		  <button onclick="myFunction()" class="dropbtn">MENU</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="index.html" tabindex="1">home</a>
+			<a href="about.html" tabindex="2">ABOUT</a>
+			<a href="stuff.html" tabindex="3">design</a>
+			<a href="contact.html" tabindex="4">contact</a>
+		  </div>
 		</div>
+	</header>
+	<div class="rest">
+		<div>
+			<h1>ABOUT ME</h1>
+			<p>
+				YR is a real Swiss Army knife of a gal with a hungry belly and a curious mind. She was born in South Korea, but she is a Californian at heart, hailing from Davis. She is proficient at data science and analytics, but there is so much more to her than meets the eye - she is a former PCV (Benin 2015-2017) and an expert orange peeler who speaks three languages. 
+				She also knows how to use Photoshop and other pretty things!
+			</p>
+			<br>
+			<p>
+				For her visual works click <a href="stuff.html">here</a> or for other computer stuff, check out her <a href="https://github.com/cyearee">Github</a>! 
+			</p>
+			<img src="img/me.JPG" alt="Picture of YR">
+		</div>
+		<div>
+			<h1>RESUME</h1>
+			<iframe src="doc/cv.pdf" tabindex="5"></iframe>
+		</div>
+	</div>	
+	<footer>
+		<hr>
+		<br>
+		<div>
+			<a href="https://www.linkedin.com/in/yea-ree-chang-5a997991" tabindex="6"><i class="fab fa-linkedin fa-3x"></i></a>
+			<a href="https://www.facebook.com/yearee.chang" tabindex="7"><i class="fab fa-facebook fa-3x"></i></a>
+			<a href="https://github.com/cyearee" tabindex="8"><i class="fab fa-github fa-3x"></i></a>
+		</div>
+		<p>Copyright &copy; 2017, My Website</p>
 	</footer>
 </body>
 </html>
