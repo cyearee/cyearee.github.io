@@ -40,7 +40,7 @@
 	// I used Two functions here.  Starter idea at: 
 	// https://codepen.io/ColleenEMc/pen/XmZzWw
 		$(document).ready(function(){
-	      $(".preview").mouseenter(function(){
+	      $(".preview").on('mouseenter keydown', function(){
 	      	$("#image").text($(this).attr("alt"));
 	      	$("#image").css('background-image', 'url("'+$(this).attr("src")+'")');
 	      })
