@@ -1,0 +1,13 @@
+.container div {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 48%;
+	border: 5px;
+	border-style: solid;
+	border-color: blue;
+	padding: 5%;
+}
+
+.container div img {
+	width: 100%;
+}
