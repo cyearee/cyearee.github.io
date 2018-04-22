@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Accessibility Evaluation - UMich Notable Alumni</title>
+	<meta charset="utf-8">
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>SI539 Final Project - Accessibility Evaluation</h1>
+	<h2>Yea-Ree Chang</h2>
+	<h3>Website: <a href="http://alumnus.alumni.umich.edu/notable-alumni/">University of Michigan Notable Alumni</a></h3>
+	<h3>Role: <a href="http://accessibility.voxmedia.com/#qa">Quality Assurance</a></h3>
+	<table style="border: 1px solid black;">
+		<thead>
+			<tr>
+				<th>Evaluation Checkpoint</th>
+				<th>Checked</th>
+				<th>Notes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Run through each page with the WAVE Chrome Extension.</td>
+				<td><input type="checkbox" checked><b></b></td>
+				<td>This page received 11 errors from WAVE. The errors consisted of five headings with no content and six links with no text to describe their purpose.</td>
+			</tr>
+			<tr>
+				<td>Users should be able to navigate through content using their keyboard.</td>
+				<td><input type="checkbox" checked><b></b></td>
+				<td>The tabbing is promising; it allows the user to skip to the content or the navigation at the beginning and it tabs in a rational order. However, although the user is able to tab through all other links and buttons without getting trapped in any element, she does not actually have the access to the real content of this page – each category of the alumni.</td>
+			</tr>
+			<tr>
+				<td>Users should be able to navigate content using a screen reader.</td>
+				<td><input type="checkbox" checked><b></b></td>
+				<td>Everything is readable by a screen reader except for the social media icons that resulted in the six WAVE errors.</td>
+			</tr>
+			<tr>
+				<td>The general architecture and hierarchy of the content should make sense.</td>
+				<td><input type="checkbox" checked><b></b></td>
+				<td>
+					<p>The general architecture and hierarchy of the content does make sense. There is clear typographic hierarchy with clear headers and there are interactive elements that also help like hovering effects over clickable elements.</p>
+					<p>The only issue that I ran into while navigating through this website is that the expandable category boxes are a bit tricky to use. There is a distinguished expand button far away from the text and in a color that does not contrast very well with the background. If this button is not used, the user has to click a couple of times on a particular area of the box itself (not its entirety) for it to open</p>
+				</td>
+			</tr>
+			<tr>
+				<td>Charts and images should all have alt-text so that users with screen readers or users on a slow connection will still be able to understand the images.</td>
+				<td><input type="checkbox" checked><b></b></td>
+				<td>The one image on this website has alt-text.</td>
+			</tr>
+			<tr>
+				<td>Decorative images should not be visible to screen readers. [Decorative images, as in they do not add additional information.]</td>
+				<td><input type="checkbox" checked><b></b></td>
+				<td>This is not applicable since there are no decorative images present.</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<h4>Suggestions</h4>
+	<ol>
+		<li>My first recommendation is to add ARIA labels to the social media links. This would not only resolve the WAVE errors, but this would also make this website more accessible to users, especially those who have a hard time seeing icons and need to use a screen reader.</li>
+		<li>The HTML of this website also is not properly written. The web designer should pay more attention to this, instead of writing empty tags that are meant to have text in it. The designer should also run the website through the validator because there do exist errors which show that the HTML was not written in the most efficient fashion. </li>
+		<li>The boxes for each category of alumni have some room for improvement. The clickable area does not expand throughout the entirety of each box and the button explicitly designed for this purpose is far away and not very noticeable with its small size and low-constrast color. To resolve this, I would either make the button very obvious and place it next to the text or just expand the clickable area. The designer would also need to make it so that it is navigable by keyboard.</li>
+		<li>I would imagine that using the search button might be a bit tricky for some users. Not only is it small, but the cursor does not change to reflect that it is a clickable element that does have an action attached to it. The search bar is also very small and might be hard to read for some.</li>
+		<li>There also does not exist a nav tag for the navigation links in the header. The designer should consider including this as an important HTML landmark that helps users with assistive devices to further define specific areas of the website.</li>
+	</ol>
+</body>
+</html>
