@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1024px) {
+	* {
+		background-color: transparent;
+		color: #dc7f16;
+	}
+	body {
+		background-image: url("../img/view.jpg");
+		width: 100%;
+		height: 100%;
+	}
+	#bwimg {
+		display: none;
+	}
+}
